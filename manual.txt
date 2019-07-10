@@ -1,0 +1,308 @@
+Gebrauchsanleitung für die Chiffriermaschine Enigma, January 12, 1938
+​
+Original German
+
+ 
+
+I. Allgemeines.
+
+1. Die Chiffriermaschine Enigma ist ein geheimer Gegenstand im Sinne der Verschlußsachen-Vorschrift (II. Dv. 99). Sie ist nach den Bestimmungen dieser Vorschrift unter Verschluß zu halten.
+
+2. Jeder Benutzer der Chiffriermaschine muß sich bewußt sein, daß die Art ihrer Konstruktion ein sorgfältiges Bedienen und Warten erfordert, damit die Maschine jederzeit betriebsfähig erhalten wird.
+
+ 
+
+II. Vorbereiten der Maschine zum Betrieb.
+
+3. Vor Inbetriebnahme ist die Chiffriermaschine auf richtiges Arbeiten zu prüfen. Hierzu sind der hölzerne Schutzkasten zu öffnen, die Haltevorrichtung (Bild I, 1) durch Anheben der Federknöpfe (I, 2) auszulösen, die Haltehebel (I, 3) herunterzuschwenken, worauf die Abdeckplatte (I/II, 4) sich aufklappen läßt und die Einstellräder (II/IV, 5) freigibt.
+
+4. Die Einstellräder (II/IV, 5) sind mehrmals gegeneinander zu verdrehen, damit die Kontakte der Chiffrierwalzen blank werden. Danach ist die Abdeckplatte (I/II, 4) wieder zu schließen und durch die Haltehebel (I, 3) zu sichern.
+
+5. Zur Säuberung der Tastkontakte sind vor Einschalten der Stroms sämtliche Tasten (II, 6) mehrmals kräftig herunterzudrücken und rasch hochschnellen zu lassen. Dabei ist eine Taste in niedergedrücktem Zustande festzuhalten, um ein unnötiges Weiterschalten der Walzen zu vermeiden.
+
+6. Der Schaltergriff (II, 7) für die Batterie ist bei frischer Batterie von Stellung "aus" auf "dunkel" zu stellen. Sobald die Spannung der Batterie nach längerem Gebrauch nachläßt, ist zum besseren Aufleuchten der Glühlampen die Schalterstellung "hell" zu verwenden. Zu frühes Benutzen der Stellung "hell" führt zu vorzeitigem Durchbrennen der Glühlampen.
+
+7. Bei Sonnenschein und zur Schonung der Augen empfiehlt es sich, die grüne Zellonplatte (I/II, 8) durch Anheben und Drehen der Federknöpfe (I/II, 9) aus dem Holzdeckel zu lösen und mit der gleichen Vorrichtung über dem Buchstaben Transparent (I, 10) zu befestigen. Die Zellonplatte dämpft das Licht der Glühlampen und verdeckt alle Buchstaben, so daß nur der aufleuchtende Buchstabe sichtbar ist.
+
+8. Zum Schutz gegen blendendes Sonnenlicht kann die Maschine dadurch abgeschattet werden, daß die Gelenke der Deckelscharniere (II, 14) nach vorn gezogen und der Holzdeckel halb heruntergeklappt wird.
+
+9. Im Inneren des Holzdeckels ist ein Blatthalter (I, 42) angebracht, damit die Texte beim Schlüsseln bequem vor Augen stehen.
+
+​
+
+III. Schlüsseleinstellung.
+
+10. Der zur Maschine ausgebene Schlüssel legt folgende 4 verschiedene Einstellungen der Maschine fest:
+
+    Reihenfolge der Chiffrierwalzen (III/IV, 12) (Walzenlage),
+
+    Einstellung der Zahlen- oder Buchstabenringe (III/IV, 13) auf den 3 Chiffrierwalzen (Ringstellung),
+
+    Einstellung der in den Fenstern (I/II, 16) sichtbaren Zahlen oder Buchstaben (Grundstellung),
+
+    Herstellung der Steckerverbindungen mittels Doppelsteckerschnüren (II, 30) am Steckerbrett (II, 15) (Steckerverbindungen).
+
+11. Die Schlüsseleinstellung geschieht folgendermaßen:
+
+Der Metalldeckel (II/III, 17) der Maschine wird geöffnet, indem die beiden Halteschrauben (II, 18) durch Drehen gelöst werden, der Deckel an den Schrauben hochgezogen und aufgeklappt wird.
+
+12. Die Walzen sind an der Seite der federnden Kontaktstifte (IV, 35) mit römischen Zahlen (IV, 34) und auf dem blanken Mittelteil mit einer diesen Zahlen entsprechenden Anzahl schwarzer Punkte (IV, 33) gekennzeichnet, so daß man die Reihenfolge der Walzen, zunächst ohne sie herausnehmen zu müssen, nachprüfen kann.
+
+Zur Herstellung der richtigen Walzenlage (vgl. Ziff. 10a) wird der in der linken hinteren Ecke liegende Haltehebel (III, 19) nach vorn bis zum Anschlag geklappt und die Umkehrwalze scharf nach links herangeschoben; dann werden die Chiffrierwalzen (III/IV, 12) an den Einstellrädern (II/IV, 5) mit der rechten Hand nach links zusammengedrückt und zusammen mit der Achse (IV, 21) herausgehoben.
+
+Die Walzen werden in der durch den Schlüssel angegebenen Reihenfolge auf die Achse geschoben und unter Zusammendrücken wieder in die Maschine eingesetzt. Beim Aufsetzen der Walzen auf die Achse ist darauf zu achten, daß die Seiten mit den glatten Kontaktflächen (IV, 36) stets auf die Seite des Achsenbundes (IV, 21a) der Welle weisen, und daß beim Einsetzen der drei auf die Achse geschobenen Walzen der Achsenbund (IV, 21a) mit den glatten Kontaktflächen stets der Umkehrwalze zugekehrt ist. Nach dem Einsetzen der Walzen in die Maschine ist der Haltehebel (III, 19) wieder nach links hinten bis zum Anschlag zu legen.
+
+Das Herausnehmen und Wiedereinsetzen der Chiffrierwalzen hat so sorgfältig zu geschehen, dass mit dem linken Lagerzapfen der Achse nicht die vorstehenden Kontaktstifte der Umkehrwalze (III, 20) verbogen werden. Es ist ferner darauf zu achten, daß nach dem Zurücklegen des Haltehebels nach hinten die Walzen richtig gerastet sind, was daran zu erkennen ist, daß die Zahlen oder Buchstaben in der Mitte der Fenster stehen. (Nachprüfung durch Drehen der einzelnen Chiffrierwalzen).
+
+13. Zum Einstellen der richtigen Ringstellung (vg; Ziff. 10b) werden die Haltefedern (IV, 22) der Zahlen- oder Buchstabenringe (IV, 13) an dem an jeder Haltefeder sizenden Knopf (IV, 23) mit der rechten Hand angehoben und die Ringe mit der linken Hand so weit gedreht, bis der von Maschine Nr. 1253 an mit einer roten Kennmarke versehene – Federzapfen (IV, 24) in das Loch neben der durch den Schlüssel vorgeschrieben Zahl einschnappt. Der Metalldeckel (II/III, 17) wird darauf geschlossen und durch die beiden Halteschrauben (II, 18) festgeschraubt.
+
+14. Zum Einstellen der Grundstellung (vgl. Ziff. 10c) wird die Abdeckplatte (I/II, 4) geöffnet und die Chiffrierwalzen (III/IV, 12) werden mittels der Einstellräder (II/IV, 5) so lange gedreht, bis die durch den Schlüssel vorgeschriebenen Zahlen oder Buchstaben der Grundstellung in den Fenstern (I/II, 16) sichtbar sind. Die Abdeckplatte ist wieder zu schliessen.
+
+15. Zum Herstellen der Steckverbindungen (vgl. Ziff. 10d) sind die Haken (III, 26) an der Stirnwand (I/III, 25) zu lösen und die Stirnwand herunterzuklappen. Dadurch werden 26 Buchstabenpaare (II, 31) frei, die mit den Buchstaben "A" bis "Z" und zugleich mit den ensprechenden Ziffern "1" bis "26" gekennzeichnet sind.
+
+Die durch Kabel verbundenen Doppelsteckerpaare (II, 14) werden einzeln am Steckergriff herausgezogen (nicht an der Steckerschnur herausreißen!). Dann wird entsprechend den im Schlüssel vorgeschriebenen Steckerverbindungen eine Anzahl von Buchstabenpaaren mittels der durch die Schnüre (II, 30) verbundenen Doppelstecker miteinander verbunden. Buchsen und Steckerpaare sind unverwechselbar ausgeführt. Es ist darauf zu achten, dass die Stecker bis zum Anschlag in die Buchsen fest hineingedrückt werden, damit ein gleichzeitiges Aufluechten mehrerer Lampen verhütet wird. Die Stirnwand ist zu schließen und durch die Haken (III, 26) zu sichern.
+
+​
+
+IV. Verschlüsseln.
+
+16. Nach dem Einstellen des Schlüssels (vgl. III) ist der Klartext Buchstabe für Buchstabe durch Niederdrücken der Tasten ähnlich wie bei einer Schreibmaschine zu schreiben. Die Tasten sind dabei ganz herunterzudrücken, bis in dem Transparent (I, 10) bzw. Auf der darübergelegten Zellonplatte (II, 8) ein Buchstabe aufleuchtet. Die nächste Taste darf erst dann niedergedrückt werden, wenn die vorhergehende Tast losgelassen und in die Ruhestellung zurückgeschnellt ist. Über die Einzelheiten des Verschlüsselns vgl. die "Schlüsselanleitung zur Chiffriermaschine Enigma" (H. Dv. g. 14).
+
+17. Nimmt eine Person das Verschlüsseln vor, so ist zweckmäßig mit der linken Hand der verschlüsselte Spruch niederzuschreiben. Stehen zum Verschlüsseln zwei Personen zur Verfügung, so bedient der eine die Maschine, die andere liest die aufleuchtenden Buchstaben ab und schreibt sie nieder.
+
+18. Für die Schreibweise von Satzzeichen, Zahlen usw. gelten die Vorschriften in der "Schlüsselanleitung zur Chiffriermaschine Enigma" (H. Dv. g. 14).
+
+V. Entschlüsseln.
+
+19. Die Maschine ist nach dem vorgeschriebenen Schlüssel einzustellen (vgl. III) und das Entschlüsseln wie das Verschlüsseln nach IV. Vorzunehmen, doch sind an Stelle der Klartextbuchstaben die Buchstaben des verschlüsselten Spruches zu tasten.
+
+ 
+
+VI. Tastfehler und Versager.
+
+20. Sind beim Schlüsseln (Ver- oder Entschlüsseln) durch Drücken falscher Tasten, Auslassen oder Doppelschreiben von Buchstaben oder durch Versager in der Maschine (Nichtaufleuchten von Lampen) Fehler entstanden, so muß das Schlüsseln vom Spruchanfang wiederholt werden. Hierzu ist der Schlüssel in den Fenstern (II, 16) wie zu Anfang einzustellen. Um aber bei einem erst gegen Ende des Schlüsselns eingetretenen Fehler die Wiederholung der ganzen Schlüsselarbeit zu vermeiden, genügt es, nach neuer Einstellung des Schlüssels eine beliebige Taste so oft zu drücken, wie vor dem Fehler Buchstaben richtig geschlüsselt sind.
+
+Beispiel: Ist beim Schlüsseln der 32. Buchstabe falsch getastet, so wird nach Wiedereinstellung des Schlüssels in dem Fenster ein beliebiger Buchstabe 30mal getastet, darauf der 31. Buchstabe des Spruches zur Kontrolle mit der entsprechenden Taste etastet und mit dem beim ersten Schlüsseln herausgekommenen Buchstaben verglichen. Ergibt der Vergleich denselben Buchstaben wie beim ersten Schlüsseln, so wird mit dem 32. und den folgenden Buchstaben in normaler Weise weitergeschlüsselt.
+
+21. Bei längeren Sprüchen wird die Verbesserung vorgekommener Versehen beim Schlüsseln wesentlich erleichtert, wenn etwa bei jedem 50. Buchstaben die gleichzeitig in den Fenstern erscheinenden Zahlen niedergeschrieben werden. Es genügt dann zum Beseitigen von Fehlern, bis zu dem letzten so niedergeschriebenen Buchstaben zurückzugehen, die zugehörigen Zahlen in den Fensern einzustellen und nur von da ab die Schlüsselarbeit zu wiederholen.
+
+ 
+
+VII. Stromquelle, Glühlampen.
+
+22. Eine allgemeine Betriebanweisung (II, 32) ist im Deckel der Maschine angebracht, damit ohne die vorliegende Gebrauchsanleitung kleine Störungen an der Maschine beseitigt werden können.
+
+23. Als Batterie wird die Batterie 4,5 KZT 5 verwendet. Sie wird bei dem Zeugamt (Nachr.) vorrätig gehalten und kann von dort bezogen werden. Ist keine brauchbare Batterie vorhanden, so ermöglichen die beiden Kordelschrauben (II, 28) den Anschluß einer beliebigen Stromquelle (Taschenlampenbatterie, Sammler u. dgl.), wobei jedoch darauf zu achten ist, daß diese Stromquelle eine Höchstspannung von 4 Volt besitzt. Zum Betrieb mit einer an die beiden Kordelschrauben (II, 28) angelegten Stromquelle wird der Schaltergriff (II, 7) auf Stellung "Sammler" gelegt.
+
+24. Zum Auswechseln der Batterie in der Chiffriermaschine ist der Deckel des Batteriekastens (III, 27), der nach Öffnen des Metalldeckels (III, 17) zugänglich ist, zu öffnen, die erschöpfte Batterie herauszuziehen und durch eine neue zu ersetzen. Dabei ist zu beachten, daß die Kontaktfedern der einzusetzenden Batterie nach rechts zeigen (vgl. die Lage der Gegenkontaktfedern im Batteriekasten [III, 27]).
+
+25. Die in der Chiffriermaschine verwendeten Glühlampen entsprechen folgenden Bedingungen: Halbkugelform, 12 mm, 3,5 Volt, 0,2 Ampere, säurefrei gelötet, vernickelter Lampensockel. In der Maschine befinden sich 10 Reservelampen auf einem Blechstreifen (I, 37) am oberen Rande des Holzdeckels. Handelsübliche Taschenlampenbirnen mit 12 mm Durchmesser können im äußersten Notfall verwendet werden, sie sind jedoch baldmöglichst auszutauschen, da sie leicht zu Störungen Anlaß geben.
+
+Von Maschine Nr. 4388 an ist auf der oberen rechten Seite des Glühlampenfeldes (III, 38) eine Öffnung mit der Bezeichnung "Lampenprüfung" (III, 39) angebracht. Durch Einstecken der Glühlampen in diese Öffnung bei Stellung des Schaltergriffs auf "dunkel" bzw. "hell" können die einzelnen Glühlampen auf ihre Brauchbarkeit geprüft werden. (Achtung: Die Glühlampen müssen sofort nach der Prüfung aus dieser Öffnung wieder herausgezogen werden.)
+
+26. Zu jeder Maschine gehören 8 Doppelsteckerschnüre, von denen 2 (I, 31) im Innern des Deckels der Maschine untergebracht werden können. Von der Maschine Nr. 4388 ab sind 2 Buchsen (die äußerste linke und äußerste rechte – durch rote Punkte gekennzeichnete – Buchse der mittleren Reihe am Steckerbrett – III, 41) und die Lampe mit der Bezeichnung "Kabelprüfung" (III, 40) auf der linken Seite des Glühlampenfeldes (III, 38) angebracht, damit die richtige Verbindung der Doppelsteckerschnüre und ihre Brauchbarkeit nachgeprüft werden können. Die beiden Buchsen sind unverwechselbar und so geschaltet, daß beim Einführen des entsprechenden Steckerstiftes eines jeden Doppelsteckers in diese Buchsen die Prüflampe aufleuchten muß; dabei ist die Doppelsteckerschnur (II, 30) durch Bewegen auf Brüche zu prüfen.
+
+ 
+
+VIII. Störungen.
+
+27. Störungen, die durch den Schlüßler behoben werden können, sind im allgemeinen Kontaktstörungen, zu deren Feststellung und Auffindung wie folgt vorzugehen ist.
+
+28. Zur Feststellung, ob Glühlampen (V, 43), Walzenkontakte (V, 44) und Kurzschlußbleche des Steckerbrettes (V, 45) in Ordnung sind, wird bei beliebiger Schlüsseleinstellung die Q-Taste gedrückt, wodurch irgendein Buchstabe, z.B. der Buchstabe "W", aufleuchtet. Unter Festhalten der niedergedrückten Q-Taste wird nun die Taste der korrespondierenden Lampe, in diesem Falle die W-Taste, gedrückt, worduch nach Loslassen der Q-Taste der Buchstabe "Q" aufleuchten muß. Die W-Taste wird weiter festgehalten und nun z.B. die E-Taste niedergedrückt, wodurch wieder ein Buchstabe aufleuchtet, z.B. "R". Jetzt wird die W-Taste losgelassen und dadurch der Buchstabe "E"zum Aufleuchten gebracht. Dann wird z.B. die T-Taste niedergedrückt usw. Auf diese Weise wird – ohne Veränderung der Schlüsseleinstellung im Fenster – das ganze Alphabet durchgeprüft.
+
+29. Brennen bei dieser Durchprüfung eine der zwei der korrespondierenden Lampen nicht, so sind folgende Untersuchungen anzustellen bzw. Fehler zu beseitigen:
+
+    Die Kontaktstifte der Chiffrierwalzen (IV, 35; V, 44) und die Umkehrwalze sind durch Drehen der Walzen in der Maschine oder nach Herausnahme der Walzen aus der Maschine durch Blankreiben der Kontaktlappen mit Polierpapier zu reinigen. Gleichzeitig ist zu prüfen, ob sich einzelne dieser Kontaktstifte klemmen. In diesem Falle sind sie mit gereinigtem Benzin zu säubern und sodann mit harz- und säurefreiem Öl hauchdünn einzufetten. Ebenso sind die festen Kontakte der Walzen (IV, 36) bei dauerndem Gebrauch der Maschine alle 6 bis 8 Wochen, sonst in entsprechend längeren Zwischenräumen mit Polierpapier zu überschleifen und mit einem wenig getränkten Öllappen abzureiben. Alle übrigen Kontakte, Tastenkontakte (V, 46,47), Lampenkontakte (V, 48) und Kurzschlußbleche (V, 45) sind sorgfältig vor Öl zu schützen.
+
+    Die Lampenkontakte sind durch Niederdrücken des Lampengegenkontaktes (V, 49) bei herausgeschraubten Glühlampen und durch Wiederfestschrauben der nicht brennenden Lampen auf richtige Kontakte zu prüfen, nachdem zuvor die beiden Glühlampen nach Ziff. 25 auf ihre Brauchbarkeit geprüft sind. (Sofern die Maschine noch keine Einrichtung zu Lampenprüfung besitzt, sind die Lampen zur Prüfung in unmittelbaren Kontakt mit den beiden Polen der Batterie zu bringen.)
+
+    Die entsprechenden Doppelsteckerschnüre sind nach Ziff. 26 zu prüfen. (Sofern die Maschine noch nicht die Einrichtung zur Kabelprüfung besitzt, muß das Kabel unter Benutzung einer Glühbirne in unmittelbaren Kontakt mit den beiden Polen der Batterie gebracht werden.) Gegebenenfalls sind schadhafte Schnüre auszuwechseln.
+
+    Durch mehrmaliges Einführen und rasches Herausziehen der Doppelstecker (II, 44) in die entspechenden Buchsenpaare (II, 31) sind die federnden Kontaktblättchen (Kurzschlußbleche) (V, 45) von den Buchsen (V, 50) abzudrücken und und gegen die Buchsen zurückschnellen zu lassen. (Vgl. Bild V, die eingeführten Stecker bei W und E im Gegensatz zu Q und R ohne Stecker.)
+
+    Zur Reinigung der betreffenden zwei Tastkontakte (V, 46,47) sind die zugehörigen Tasten entsprechend Ziff. 5 mehrmals kräftig herunterzudrücken und rasch hochschnellen zu lassen, wobei eine dritte Taste dauernd gedrückt bleibt, um ein Weiterschalten der Walzen zu vermeiden.
+
+Unter allen Umständen ist zu vermeiden, daß die einzelnen Kontakte mit den Händen berührt werden.
+
+30. Wenn alle Lampen nicht brennen, so ist die Batterie verbraucht oder die Polenden haben keinen Kontakt mit den Federn des Batteriekastens. Behebung des Fehlers erfolgt durch Einsetzen einer Ersatzbatterie nach Ziff. 24 bzw. durch Ausbiegen der Federn, so daß sie Kontakt bekommen.
+
+31. Sind die Störungen nach Prüfung in der oben geschilderten Weise nicht zu beheben, die sind weiteren Instandsetzungsarbeiten nur in den Werkstätten der Nachr.-Abteilungen und der Heereszeugämter bzw. des Nachr.-Zeugamts nach besonderen Richtlinien zulässig. 
+Instandsetzungsarbeiten an Chffriermaschinen sind grundsätzlich verboten. Die Maschine ist in diesem Falle für den Bereich des O.K.H. an das Heeres-Zeugamt (Nachr.), für den Bereich des Ob. d. L. an das Luft-Nachr.-Zeugamt einzusenden.
+
+​
+
+IX. Wartung der Maschine.
+
+32. Die Achse (IV, 21) der Chiffrierwalzen sowie der Lagerstellen der Antriebswelle sind bei dauerndem Gebrauch der Maschine im Abstand von 6 bis 8 Wochen, sonst etwa vierteljährlich zu reinigen und mit säure- und harzfreiem Öl leicht einzufetten. Dabei muß peinlichst vermieden werden, daß Öl an irgendeine Kontaktstelle (Tastkontakte, Lampenkontakte und Kurzschlußbleche) dringt.
+
+33. Zum Schutz der Maschine gegen Eindringen von Staub u. dgl. ist der Metalldeckel (II/III, 17) und die Abdeckplatte (I/II, 4) immer geschlossen zu halten. Sobald die Maschine nicht mehr benutzt wird, ist der Schaltergriff (II, 7) für die Batterie auf "aus" zu stellen und der Deckel des Holzkastens zu schließen.
+
+
+ 
+
+Berlin, den 12. Januar 1937.
+
+
+ 
+
+Der Reichskriegsminister
+
+und Oberbefehlshaber der Wehrmacht.
+
+I.A.
+
+Fellgiebel
+
+​
+
+​
+English translation
+
+​
+
+I. General.
+
+1. The Enigma encryption machine is a secret object in terms of the secret item regulation (Verschlußsachen-Vorschrift) (II. Dv. 99). According to the regulations of this provision, it is to be kept locked up.
+
+2. Every user of the encryption machine must be aware of the fact that the construction of the machine requires careful usage and maintenance, so that the machine is ready for use at any time.
+
+ 
+
+II. Preparation for Using the Machine.
+
+3. Before starting the machine, it is to be checked for proper operation. For this, the wooden protection box is to be opened, the holding fixture (Picture I, 1) to be opened by lifting the spring-loaded buttons (I, 2), the holding levers (I, 3) to be pivoted down, whereupon the cover plate (I/II, 4) can be opened which exposes the thumbwheel (II/IV,5).
+
+4. The thumbwheels (II/IV, 5) are to be rotated against each other, so that the contacts of the encryption cylinders become bare. Subsequently, the cover plate (I/II, 4) is to be closed and secured by the the holding levers (I, 3).
+
+5. To clean the key contacts, all keys (II, 6) are to be pressed down firmly multiple times, and let snap back rapidly. While doing this, one key is to be held down to avoid unnecessary progression of the cylinders.
+
+6. The battery switch (II, 7) is to be set to „dunkel" (dark) when the battery is fresh. As soon as the battery voltage degrades after long use, the setting „hell" (light) is to be used for improved brightness of the bulbs. Using the setting „hell" too early will lead to premature bulb burn out.
+
+7. In bright sunshine, and to spare the user’s eyes, it is advisable to remove the green Zellon panel (I/II, 8) from the wooden cover by lifting and turning the spring-loaded buttons (I/II, 9), and to secure it on top of the transparent letters using the same mechanism. The Zellon panel attenuates the light of the bulbs and covers all letters so that only the lit letter is visible.
+
+8. For protection against bright sunlight the device can be shaded through pulling the joints of the cover hinge (II, 14) out towards the front, and closing the wooden cover down partially.
+
+9. There is a sheet holder (I, 42) on the inside of the wooden cover that allows documents to be held comfortably in front of the operators eyes during encryption.
+
+ 
+
+III. Setting the Key.
+
+10. The codebook issued with the machine determines the following 4 settings of the device:
+
+    Order of the encryption rotors (III/IV, 12) (rotor location),
+
+    Setting of the number or letter rings (III/IV, 13) on the 3 encryption rotors (ring setting),
+
+    Setting of the numbers or letters visible in the windows (I/II, 16) (initial setting),
+
+    Establishment of the connections using the patchcords (II, 30) on the plug board (II, 15) (patch connections).
+
+11. Setting of the keys happens as follows:
+
+The metal cover (II/III, 17) of the device is opened by loosening the two holding bolts (II, 18) through turning, and then lifting the cover at the bolts.
+
+12. The rotors are marked with roman numerals (IV, 34) on the side of the spring-loaded contact pins (IV, 35), and with a number of black dots (IV, 33) corresponding to the numerals on the blank middle part, so that one can check the order of the cylinders without having to remove them.
+
+To establish the correct rotor order (cf. 10a), the holding/release lever in the back left corner (III, 19) is moved to the stop position, and the reflector (Umkehrwalze) is pushed sharply to the left; then the encryption rotors (III/IV, 12) are squeezed together at the thumbwheels (II/IV, 5) to the left with the right hand, and can be removed together with the shaft (IV, 21).
+
+The rotors are put on the shaft in the order defined by the codebook, and inserted into the machine by squeezing them together. When placing the rotors on the shaft, care must be taken that the sides with the polished contact surfaces (IV, 36) always point in the direction of the stop on the shaft (IV, 21a), and that the stop’s (IV, 21a) polished contact surfaces points to the reflector (Umkehrwalze) when inserting the three cylinders on the axle. After insertion of the rotors into the machine, the holding lever (III, 19) is to be folded all the way to the back left.
+
+Removal and insertion of the encryption rotors must happen so carefully that the left bearing pivot does not bend the protruding contact pins of the reflector (III, 20). Furthermore, attention is to be paid that the cylinders rest correctly after folding the holding lever backwards. This can be detected by checking whether the numbers or letters are positioned in the center of the windows (double-check by rotating the encryption rotors).
+
+13. In order to set the correct ring position (Ringstellung) (cf. 10b), the holding springs (IV, 22) of the number or letter rings (IV, 13) are lifted at the button (IV, 23) using the right hand, and the rings rotated with the left hand until the spring-loaded pivot (IV, 24) (which has a red mark starting with machine number 1253) snaps into the hole next to the number as specified by the codebook. The metal cover (II/II, 17) is now closed and fastened using the holding bolts (II, 18).
+
+14. To set the initial state (Grundstellung) (cf. 10c), the cover (I/II, 4) is opened and the encryption rotors (III/IV, 12) are rotated using the thumbwheels (II/IV, 5) until the numbers or letters of the initial state as specified by the codebook are visible in the windows (I/II, 16). The cover is to be closed again.
+
+15. To establish the patch connections (cf. 10d), the hooks (III, 26) on the front panel (I/III, 25) are to be loosened and the front panel is to be flipped down. Thus 26 letter pairs (II, 31) which are labelled with the letters "A" to "Z" and also „1" to „26" are exposed.
+
+The patch cords (II, 14) are pulled out one by one using the plug (do not pull out with the cable!). Then a number of letter pairs is connected to each other using the patchcords as specified by the codebook. Sockets and patchcords are designed distinctively [meaning they only go in the correct way, you cannot plug them in upside down]. Attention is to be paid to the plugs being pushed into the sockets as far as they will go, as to avoid simultaneous lighting up of multiple lights. The front panel is to be closed and to be secured with the hooks (III, 26).
+
+ 
+
+IV. Encrypting.
+
+16. After setting the key (cf. III), the cleartext is to be typed letter for letter by pressing the keys, similar to a typewriter. The keys are to be pressed all the way down, until a letter lights up in the transparent letter display (I, 10) or through the Zellon panel. The next key may only be pressed when the previous key has been released and snapped back into its resting position. Cf. "Schlüsselanleitung zur Chiffriermaschine Enigma" (H. Dv. g. 14) [the manual which details the actual encryption methods] for details on encrypting.
+
+17. If one person conducts the encryption, it is useful writes down the encrypted text with the left hand. If two people are available, one operates the device, and the other reads the letters that light up and writes them down.
+
+18. The instructions in "Schlüsselanleitung zur Chiffriermaschine Enigma" (H. Dv. g. 14) apply for writing punctuation marks, numbers etc.
+
+ 
+
+V. Decrypting.
+
+19. The device is to be set to the specified key (cf. III) and the decryption conducted same as encryption (described in IV), but cipher text is to be typed instead of clear text.
+
+ 
+
+VI. Typing mistakes and failures.
+
+20. If mistakes happen during encryption by pressing the incorrect keys, omitting letters, or double-typing of keys, or through failures of the machine, (lamps not lighting up) the encryption needs to be repeated from the beginning of the message. In that case, the key in the windows must be reset to the initial state. To avoid repeating the whole encryption process, if a mistake happens towards the end, it suffices to press any key as often as letters have been encrypted before the mistake.
+
+Example: if the 32nd letter is keyed in wrong during encryption, after resetting the key in the window, an arbitrary letter is typed 30 times, then the 31st letter is typed correctly to double-check and compare the resulting letter with the resulting letter in the first process. If the comparison results in the same letter that resulted from the first encryption process, the encryption can commence with the 32nd and all following letter in normal fashion.
+
+21. With longer messages the correction of mistakes during encryption is simplified if one writes down the numbers in the windows with every 50th letter. To fix the mistake it now suffices to go back to the last letter where one has a recorded position, to set the corresponding numbers in the windows and to repeat the encryption process from there.
+
+ 
+
+VII. Electricity sources, Lamps.
+
+22. The general user manual (II, 32) is located in the cover of the machine so small problems can be fixed without the manual being at hand.
+
+23. The 4.5 KZT 5 is used as the battery. It is kept in supply by the signal corps supply depot and can be acquired from there. If no usable battery is present, the power posts/leads allow connection from an arbitrary power source (flashlight battery, converter, etc.) however the voltage must not exceed 4 Volts. To use an electricity source on these power leads, the switch is set to "Sammler" [converter].
+
+24. To exchange the batteries in the encryption machine, the cover of the battery box (III, 27) that is accessable after opening the metal cover (III, 17) is to be opened, the exhausted battery pulled out and replaced with a fresh one. Make sure that the contact springs of the fresh battery point to the right (cf. the position of the corresponding contact springs in the battery box [III, 27]).
+
+25. The lamps used in the encryption machine have the following properties: half-spherical shape, 12mm, 3.5 Volt, 0.2 Ampere, soldered acid-fee, and a nickel-coated socket. Ten spare lamps are located on a metal strip (I, 37) on the upper edge of the wood cover. Commercially available flashlight bulbs with 12mm diameter can be used under emergency circumstances, they are to be replaced as soon as possible because they often cause failures.
+
+Starting with machine number 4388 an opening with the lable "Lampenprüfung" [lamp check] (III, 39) is available on the right side of the lamp board (III, 38). Lamps can be checked for usability by placing them into this opening while setting the power switch either to "dunkel" [dark] or "hell" [light]. (Attention: the lamps must be removed from the opening immediately after the check.)
+
+26. Eight patch cables accompany each machine, two of which (I, 31) can be placed into the cover of the machine. Starting with machine number 4388, two sockets (the extreme left and extreme right socket of the center row of the plugboard – III, 41, marked with a red dot) and the lamp labeled "Kabelprüfung" (III, 40) are placed on the left side of the lamp board (III, 38) so that the correct connection of patch cables and their condition can be checked. Both sockets are unmistakable [meaning they only go in one way; one socket is larger than the other] and connected such that the checklamp must light up when inserting the corresponding pins of every plug into these sockets; the patch cable (II,30) is to be wiggled/moved to check it for breakage.
+
+ 
+
+VII. Failures.
+
+27. Failures that can be corrected by the operator are usually contact failures. To detetct and find the failures, it is to be proceeded as follows.
+
+28. To determine whether lamps (V, 43), rotor contacts (V, 44) and short-circuit sheets of the plugboard (V, 45) are in working order, the „Q" key is pressed with any setting of the key, whereupon another letter (for example: „W") lights up. While holding the „Q" key, the key of the corresponding lamp (in this case the „W" key) is pressed, whereby the letter „Q" has to light up after releasing the „Q" key. The „W" key is now held down and, for example, the „E" key is pressed, whereby another letter, for example, „R" lights up. Now the „W" key is released and thus the letter „E" lights up. Then, for example, the „T" key is pressed etc. In this manner, the whole alphabet is checked without changing the key in the window.
+
+29. If, during this test, one of the two corresponding lamps are not lighting up, the following investigation is to be conducted or rather failures to be corrected:
+
+    The contact pins of the rotors (IV, 35; V, 44) and the reflector are to be cleaned by turning the rotors inside the machine, or after removal of the rotors from the machine by sanding the contact tabs with sandpaper. At the same time it must be checked whether some of the contact pins are jammed. In this case they must be cleaned with clean gasoline and then lubricated with resin- and acid free oil. Also, the fixed contact areas of the rotors are to be sanded with sandpaper and rubbed with a lightly soaked oil rag every 6 to 8 weeks when the machine is used heavily, otherwise in proportionately longer intervals. All other contact areas, key contacts (V, 46,47), lamp contacts (V, 48) and short circuit sheets (V, 45) are to be protected carefully from oil.
+
+    The lamp contacts are to be checked for correct contact by pressing down the lamp’s counter contact (V, 49) while the lamp is removed, and by reinserting the failing lamps after checking both lamps for usability according to section 25. (In case the machine does not yet have a lamp check feature, the lamps are to be brought into immediate contact with both poles of the battery to check them).
+
+    The corresponding patch cables are to be tested according to section 26. (In case the machine does not yet have the cable check feature, the cable must be brought into immediate contact with both poles of the battery while using a lamp). If necessary, damaged cables are to be exchanged.
+
+    The spring-loaded contact plates (short circuit sheets) (V, 45) are to be pressed away from the plug socket (jack? bushing?) (V, 50) and let snap back by repeated insertion and quick removal of the patch cable plugs (II, 44) into the corresponding sockets pairs (II, 31). (cf. Picture V – inserted plugs at W and E, compared to Q and R without plug).
+
+    To clean the respective pair of key contacts (V, 46, 47), the corresponding keys are to be rapidly pressed and released multiple times according to section 5, whereby a third key is continually pressed to avoid movement of the rotors.
+
+Touching the contact areas with the hands is to be avoided by all means.
+
+30. If no lamps light up, the battery is exhausted, or the battery poles do not make contact with the springs of the battery box. Correction of the problem results from insertion of a replacement battery according to section 24, or by bending the springs out so that they make contact.
+
+31. If the failure cannot be corrected as mentioned above, all further repairs are permitted only in the signal corps department, army arsenal or signal corps arsenal according to special rules. 
+Repairs on encryption machines are strictly prohibited. In this case, the machine is to be sent to the army arsenal (Heeres-Zeugamt) for the domain of the O.K.H. (Oberkommando des Heeres), or to the air force signal corps arsenal for the domain of the Ob. d. L. (Oberkommando der Luftwaffe).
+
+ 
+
+IX. Maintenance of the Machine.
+
+32. The rotor shaft (IV, 21) as well as the bearing areas of the driving shaft are to be lubricated with acid- and resin-free oil every 6 to 8 weeks under continuous use, otherwise approximately every three months. In doing so, it must be carefully avoided to get oil on any contact area (key contacts, lamp contacts and short circuit sheets).
+
+33. To protect the machine against entry of dust etc., the metal cover (II/II, 17) and the cover plate (I/II, 4) is to be kept closed at all times. As soon as the machine is no longer used, the battery switch handle (II, 7) is to be set to "off" ("aus"), and the cover of the wooden box is to be closed.
+
+​
+
+Berlin on January 12th, 1937.
+
+ 
+
+On Behalf of 
+The Minister of War 
+and Army Commander in Chief 
+I.A. 
+Fellgiebel
