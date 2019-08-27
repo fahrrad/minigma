@@ -1,41 +1,48 @@
+
+#include <Wire.h>
+#include <Adafruit_MCP23017.h>
+
 bool readColumnOne;
 bool readColumnTwo;
 
+Adafruit_MCP23017 mcp;
+
 // GPIO pins for LED Rows
 int LED_NUMBER_OF_ROWS=3;
-int ledRowPins[3] = {D0, D2, D3};
+int ledRowPins[3] = {5, 3, 2};
 int LED_NUMBER_OF_COLUMNS=2;
-int ledColumnPins[2] = {D1, D4};
+int ledColumnPins[2] = {4, 1};
 
 // GPIO pins for Keys
 int KEY_NUMBER_OF_ROWS = 3;
-int keyRowPins[3] = {D5, D8, 10};
+int keyRowPins[3] = {0,3,5};
 int KEY_NUMBER_OF_COLUMNS = 2;
-int keyColumnPins[2] = {D6, D7};
+int keyColumnPins[2] = {1,2};
 
 
 void setup() {
   Serial.begin(9600);
+  mcp.begin();
   // Setup GPIO pins for keys
   // these 2 pins will be read. (columns)
   // They should be pulled down.
-  for(int i = 0; i < LED_NUMBER_OF_COLUMNS ; i++ ){
-    pinMode(keyColumnPins[i], INPUT);
+  for(int i = 0; i < KEY_NUMBER_OF_COLUMNS ; i++ ){
+    mcp.pinMode(keyColumnPins[i], INPUT);
   }  
 
   // Rows will be scanned.
   for(int i = 0; i < KEY_NUMBER_OF_ROWS ; i++ ){
-    pinMode(keyRowPins[i], OUTPUT);
+    mcp.pinMode(keyRowPins[i], OUTPUT);
   }  
   
   // Setup LED GPIOs for output
   // Rows
   for(int i=0; i < 3; i++){
-    pinMode(ledRowPins[i], OUTPUT);
+    mcp.pinMode(ledRowPins[i], OUTPUT);
   }
   // columns
   for(int i=0; i < 2; i++){
-    pinMode(ledColumnPins[i], OUTPUT);
+    mcp.pinMode(ledColumnPins[i], OUTPUT);
   }
 }
 
@@ -44,94 +51,55 @@ void turnAllLedsOff(){
   // Rows
   for(int i=0; i < LED_NUMBER_OF_ROWS; i++){
     Serial.println("Setting" + String(ledRowPins[i]) + "LOW");
-    digitalWrite(ledRowPins[i], LOW);
+    mcp.digitalWrite(ledRowPins[i], LOW);
   }
   // columns
   for(int i=0; i < LED_NUMBER_OF_COLUMNS; i++){
     Serial.println("Setting" + String(ledColumnPins[i]) + "HIGH");
-    digitalWrite(ledColumnPins[i], HIGH);
+    mcp.digitalWrite(ledColumnPins[i], HIGH);
   }
 }
 
-void turnOnLed100ms(int number){
+void turnOnLed1000ms(int number){
   int column = number % LED_NUMBER_OF_COLUMNS;
   int row = number / LED_NUMBER_OF_COLUMNS;
  
-  digitalWrite(ledRowPins[row], HIGH);
-  digitalWrite(ledColumnPins[column], LOW);
-  delay(100);
-  digitalWrite(ledRowPins[row], LOW);
-  digitalWrite(ledColumnPins[column], HIGH);
+  mcp.digitalWrite(ledRowPins[row], HIGH);
+  mcp.digitalWrite(ledColumnPins[column], LOW);
+  delay(1000);
+  mcp.digitalWrite(ledRowPins[row], LOW);
+  mcp.digitalWrite(ledColumnPins[column], HIGH);
   
 
 }
 
-void loop_(){
+void loop(){
   for (int i =0; i< 6; i++){
-    //Serial.println("switching on" +  String(i));
-    turnOnLed100ms(i);
+    Serial.println("switching on" +  String(i));
+    turnOnLed1000ms(i);
     delay(1000);
   }
 }
 
-void loop() {
+void loop_() {
   // Rows
   int keyRead = -1;
   for (int r = 0; r < KEY_NUMBER_OF_ROWS; r++){
     // Scan 1 Row
-    Serial.println("Set ROW " + String(keyRowPins[r]) + " HIGH");
-    digitalWrite(keyRowPins[r], HIGH);
+    // Serial.println("Set ROW " + String(r) + " HIGH");
+    mcp.digitalWrite(keyRowPins[r], HIGH);
     for(int c = 0; c < KEY_NUMBER_OF_COLUMNS; c++){
-      delay(100);
-      bool cRead = digitalRead(keyColumnPins[c] );
-      Serial.println("Read COLUMNS " + String(keyColumnPins[c]) + ": " + String(cRead));
+      //delay(100);
+      bool cRead = mcp.digitalRead(keyColumnPins[c] );
+      // Serial.println("Read COLUMNS " + String(c) + ": " + String(cRead));
       if (cRead){
-        keyRead = ((r+1) * KEY_NUMBER_OF_ROWS) + c;
-        delay(100);
-        Serial.println("Read key " + String(keyRead));
+        keyRead = (r * KEY_NUMBER_OF_COLUMNS) + c ;
+        //delay(100);
+        //Serial.println("%%%%%%%%%%%%%%%%%%%  " + String(keyRead));
+        turnOnLed1000ms(keyRead);
       }
     }
-    Serial.println("Set ROW " + String(keyRowPins[r]) + " LOW");
-    digitalWrite(keyRowPins[r], LOW);
-
-    delay(1000);
+    // Serial.println("Set ROW " + String(r) + " LOW");
+    mcp.digitalWrite(keyRowPins[r], LOW);
   }
-
-  if (keyRead != -1 ) 
-  {
-    turnOnLed100ms(keyRead);  
-    keyRead = -1; 
-  }
-  
-//  digitalWrite(8, HIGH);
-//  digitalWrite(9, LOW);
-//  digitalWrite(10, LOW);
-//
-//  readColumnOne = digitalRead(2);
-//  readColumnTwo = digitalRead(3);
-//
-//  if (readColumnOne) turnOnLed100ms(0); 
-//  if (readColumnTwo) turnOnLed100ms(1);
-//
-//  // Row 2
-//  digitalWrite(8, LOW);
-//  digitalWrite(9, HIGH);
-//  digitalWrite(10, LOW);
-//
-//  readColumnOne = digitalRead(2);
-//  readColumnTwo = digitalRead(3);
-//
-//  if (readColumnOne) turnOnLed100ms(2);
-//  if (readColumnTwo) turnOnLed100ms(3);
-//
-//  // Row 3
-//  digitalWrite(8, LOW);
-//  digitalWrite(9, LOW);
-//  digitalWrite(10, HIGH);
-//
-//  readColumnOne = digitalRead(2);
-//  readColumnTwo = digitalRead(3);
-//
-//  if (readColumnOne) turnOnLed100ms(4);
-//  if (readColumnTwo) turnOnLed100ms(5);
 }
