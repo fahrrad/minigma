@@ -9,30 +9,33 @@ Adafruit_MCP23017 mcp;
 
 // GPIO pins for LED Rows
 int LED_NUMBER_OF_ROWS=3;
-int ledRowPins[3] = {5, 3, 2};
+int ledRowPins[3] = {15,15, 15};
 int LED_NUMBER_OF_COLUMNS=2;
-int ledColumnPins[2] = {4, 1};
+int ledColumnPins[2] = {15,15};
 
 // GPIO pins for Keys
 int KEY_NUMBER_OF_ROWS = 3;
-int keyRowPins[3] = {0,3,5};
-int KEY_NUMBER_OF_COLUMNS = 2;
-int keyColumnPins[2] = {1,2};
+int keyRowPins[3] = {9,10,12};
+int KEY_NUMBER_OF_COLUMNS = 9;
+int keyColumnPins[9] = {13,0,1,2,3,4,5,6,7};
 
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(74880);
   mcp.begin();
+  
   // Setup GPIO pins for keys
-  // these 2 pins will be read. (columns)
-  // They should be pulled down.
+  // column pins will be scanned. ()
   for(int i = 0; i < KEY_NUMBER_OF_COLUMNS ; i++ ){
-    mcp.pinMode(keyColumnPins[i], INPUT);
+    mcp.pinMode(keyColumnPins[i], OUTPUT);
+    mcp.digitalWrite(keyColumnPins[i], HIGH);
   }  
 
-  // Rows will be scanned.
+  // Rows will be read.
+  // They should be pulled down.
   for(int i = 0; i < KEY_NUMBER_OF_ROWS ; i++ ){
-    mcp.pinMode(keyRowPins[i], OUTPUT);
+    mcp.pinMode(keyRowPins[i], INPUT);
+    mcp.pullUp(keyRowPins[i], HIGH);
   }  
   
   // Setup LED GPIOs for output
@@ -73,7 +76,7 @@ void turnOnLed1000ms(int number){
 
 }
 
-void loop(){
+void loop__(){
   for (int i =0; i< 6; i++){
     Serial.println("switching on" +  String(i));
     turnOnLed1000ms(i);
@@ -81,25 +84,26 @@ void loop(){
   }
 }
 
-void loop_() {
+void loop() {
   // Rows
   int keyRead = -1;
-  for (int r = 0; r < KEY_NUMBER_OF_ROWS; r++){
-    // Scan 1 Row
+  for (int r = 0; r < KEY_NUMBER_OF_COLUMNS; r++){
+    // Scan 1 column
     // Serial.println("Set ROW " + String(r) + " HIGH");
-    mcp.digitalWrite(keyRowPins[r], HIGH);
-    for(int c = 0; c < KEY_NUMBER_OF_COLUMNS; c++){
+    mcp.digitalWrite(keyColumnPins[r], LOW);
+    for(int c = 0; c < KEY_NUMBER_OF_ROWS; c++){
       //delay(100);
-      bool cRead = mcp.digitalRead(keyColumnPins[c] );
+      bool cRead = mcp.digitalRead(keyRowPins[c] );
       // Serial.println("Read COLUMNS " + String(c) + ": " + String(cRead));
-      if (cRead){
-        keyRead = (r * KEY_NUMBER_OF_COLUMNS) + c ;
-        //delay(100);
-        //Serial.println("%%%%%%%%%%%%%%%%%%%  " + String(keyRead));
-        turnOnLed1000ms(keyRead);
+      if (!cRead){
+        keyRead = (r * KEY_NUMBER_OF_ROWS) + c ;
+        
+        Serial.println("%%%%%%%%%%%%%%%%%%%  " + String(keyRead));
+        delay(100);
+        //turnOnLed1000ms(keyRead);
       }
     }
     // Serial.println("Set ROW " + String(r) + " LOW");
-    mcp.digitalWrite(keyRowPins[r], LOW);
+    mcp.digitalWrite(keyColumnPins[r], HIGH);
   }
 }
