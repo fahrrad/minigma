@@ -48,6 +48,13 @@ int keyRowPins[3] = {9,10,12};
 int KEY_NUMBER_OF_COLUMNS = 9;
 int keyColumnPins[9] = {13,0,1,2,3,4,5,6,7};
 
+int rotor1 = 0;
+int rotor2 = 0;
+int rotor3 = 0;
+
+
+
+
 
 void setup() {
   Serial.begin(74880);
@@ -101,19 +108,69 @@ void turnOnLed1000ms(int number){
  
   mcpLights.digitalWrite(ledRowPins[row], HIGH);
   mcpLights.digitalWrite(ledColumnPins[column], LOW);
-  delay(1000);
+  delay(100);
   mcpLights.digitalWrite(ledRowPins[row], LOW);
   mcpLights.digitalWrite(ledColumnPins[column], HIGH);
   
 
 }
 
-void loop__(){
-  for (int i =0; i< 6; i++){
+void loop_(){
+  for (int i =0; i< 26; i++){
     Serial.println("switching on" +  String(i));
     turnOnLed1000ms(i);
     delay(1000);
   }
+}
+
+int keyToLetter(int keyNumber){
+  switch (keyNumber){
+    case 1:
+      return 'A';
+      break;
+  }
+  // Row 1
+  // Q => 2
+  // W => 5
+  // E => 8
+  // R => 11
+  // T => 14
+  // Z => 17
+  // U => 20
+  // I => 23
+  // O => 26
+
+  // Row 2
+  // A => 1
+  // S => 4
+  // D => 7
+  // F => 10
+  // G => 13
+  // H => 16
+  // J => 19
+  // K => 22
+
+  // Row 3
+  // P => 0
+  // Y => Y
+  // X => 6
+  // C => C
+  // V => 12
+  // B => 15
+  // N => 18
+  // M => 21
+  // L => 24
+}
+
+int letterToLight(){
+  // Q => 0
+  // W => 1
+  // E => 2
+  // R => 
+}
+
+int translate( ){
+  
 }
 
 void loop() {
