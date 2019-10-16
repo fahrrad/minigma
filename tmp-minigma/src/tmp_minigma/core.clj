@@ -1,14 +1,17 @@
 (ns tmp-minigma.core
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer :all]
+            [clojure.string :as s]))
 
 (def rotor-position-1 (atom 0))
 (def rotor-position-2 (atom 0))
 (def rotor-position-3 (atom 0))
 
-(def rotor-1 "ekmflgdqvzntowyhxuspaibrcj")
-(def rotor-2 "ajdksiruxblhwtmcqgznpyfvoe")
-(def rotor-3 "bdfhjlcprtxvznyeiwgakmusqo")
-(def reflector "ejmzalyxvbwfcrquontspikhgd")
+;;                    abcdefghijklmnopqrstuvwxyz
+(def rotor-1         "ekmflgdqvzntowyhxuspaibrcj")
+(def rotor-1-reverse "uwygadfpvzbeckmthxslrinqoj")
+(def rotor-2         "ajdksiruxblhwtmcqgznpyfvoe")
+(def rotor-3         "bdfhjlcprtxvznyeiwgakmusqo")
+(def reflector       "ejmzalyxvbwfcrquontspikhgd")
 
 (defn ord [c]
   (- (int c) (int \a)))
@@ -36,8 +39,8 @@
   (let [r1 (mod n (Math/pow 26 3))]))
 
 (defn enigmate [c]
-  (-> c
-      (rotate @rotor-position-1)
+  #dbg(-> c
+      ;; (rotate @rotor-position-1)
       (translate rotor-1)
       ;; (rotate @rotor-position-2)
       ;; (translate rotor-2)
@@ -50,8 +53,8 @@
       ;; (translate rotor-3)
       ;; (rotate @rotor-position-2)
       ;; (translate rotor-2)
-      (rotate @rotor-position-1)
-      (translate rotor-1)))
+      ;; (rotate @rotor-position-1)
+      (translate rotor-1-reverse)))
 
 (deftest rotate-test
   (testing "rotate by 0 is the same"
@@ -76,4 +79,8 @@
 
 (deftest enigmate-test
   (testing "encrption should be symetric"
-    (is (= \a (enigmate (enigmate \a))))))
+    (is (= \a (enigmate (enigmate \a)))))
+  (testing "encrption should be symetric"
+    (is (= \b (enigmate (enigmate \b)))))
+  (testing "encrption should be symetric"
+    (is (= \z (enigmate (enigmate \z))))))
