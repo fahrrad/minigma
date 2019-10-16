@@ -26,8 +26,14 @@
  *  SDA & SCL are both connected over a 2.2k Ohmn Resistor to +3V
  *  
  *  
+ *  
+ *  ox20 MCP23017 Keys
+ *  0x24 MCP2307 Leds
+ *  0x27 LCD
  */
+#include <LiquidCrystal_I2C.h>
 #include <Wire.h>
+#include <ESP8266WiFi.h>
 // Need to update the source file for this library to use wire.begin(0,2) in stead of the default constructor when using ESP8226
 #include <Adafruit_MCP23017.h>
 
@@ -36,6 +42,7 @@ bool readColumnTwo;
 
 Adafruit_MCP23017 mcpKeys;
 Adafruit_MCP23017 mcpLights;
+LiquidCrystal_I2C lcd(0x27,16,2);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 
 // GPIO pins for LED Rows
 int LED_NUMBER_OF_ROWS=3;
@@ -49,18 +56,99 @@ int keyRowPins[3] = {9,10,12};
 int KEY_NUMBER_OF_COLUMNS = 9;
 int keyColumnPins[9] = {13,0,1,2,3,4,5,6,7};
 
-int rotor1 = 0;
-int rotor2 = 0;
-int rotor3 = 0;
+char rotorPosition1 = '?';
+char rotorPosition2 = '?';
+char rotorPosition3 = '?';
+
+String rotor1 = "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
+String rotor2 = "AJDKSIRUXBLHWTMCQGZNPYFVOE";
+String rotor3 = "BDFHJLCPRTXVZNYEIWGAKMUSQO";
+String reflector = "EJMZALYXVBWFCRQUONTSPIKHGD";
+
+void i2c_scan()
+{
+  byte error, address;
+  int nDevices;
+
+  Serial.println("Scanning I2C...");
+
+  nDevices = 0;
+  for(address = 1; address < 127; address++ ) 
+  {
+    // The i2c_scanner uses the return value of
+    // the Write.endTransmisstion to see if
+    // a device did acknowledge to the address.
+    Wire.beginTransmission(address);
+    error = Wire.endTransmission();
+
+    if (error == 0)
+    {
+      Serial.print("I2C device found at address 0x");
+      if (address<16) 
+        Serial.print("0");
+      Serial.print(address,HEX);
+      Serial.println("  !");
+
+      nDevices++;
+    }
+    else if (error==4) 
+    {
+      Serial.print("Unknown error at address 0x");
+      if (address<16) 
+        Serial.print("0");
+      Serial.println(address,HEX);
+    }    
+  }
+  if (nDevices == 0)
+    Serial.println("No I2C devices found\n");
+  else
+    Serial.println("done\n");
+
+}
+
+char readChar(){
+  while (true) {
+    for (int r = 0; r < KEY_NUMBER_OF_COLUMNS; r++){
+      mcpKeys.digitalWrite(keyColumnPins[r], LOW);
+      for(int c = 0; c < KEY_NUMBER_OF_ROWS; c++){
+        bool cRead = mcpKeys.digitalRead(keyRowPins[c] );
+        if (!cRead){
+          // wait till key is released
+          while (!mcpKeys.digitalRead(keyRowPins[c])){
+            delay(100);
+          }
+          mcpKeys.digitalWrite(keyColumnPins[r], HIGH);
+          int keyRead = (r * KEY_NUMBER_OF_ROWS) + c ;
+          return keyToLetter(keyRead);
+        }
+      }
+      mcpKeys.digitalWrite(keyColumnPins[r], HIGH);
+    }
+  delay(100);
+  }
+}
+
 
 void setup() {
+  //disable Wifi to save power
+  WiFi.forceSleepBegin();
+ 
+  Wire.begin(0,2);
+  // This is the speed that the bootloader uses
   Serial.begin(74880);
+
+  i2c_scan();
+
+  lcd.init();                      // initialize the lcd 
+  lcd.init();
+  // Print a message to the LCD.
+  lcd.backlight();
+  lcd.setCursor(0,0);
+  lcd.print("Minigma start!!");
   
-  delay(1000);
+  
   mcpKeys.begin(0);
-  delay(1000);
   mcpLights.begin(4);
-  delay(1000);
   
   // Setup GPIO pins for keys
   // column pins will be scanned. ()
@@ -92,7 +180,7 @@ void setup() {
     mcpLights.digitalWrite(ledRowPins[i], HIGH);
   }
 
-  // 
+  // init the leds: Going over them once seems to be needed to set them to the state they can be turned on 1 by 1
   for (int i=0; i<= 26; i++){
     delay(20);
     if (i == 9) continue;
@@ -104,22 +192,28 @@ void setup() {
     mcpLights.digitalWrite(ledRowPins[row], LOW);
     mcpLights.digitalWrite(ledColumnPins[column], HIGH);
   }
-}
 
-void turnAllLedsOff(){
-  // reset all LEDS (All Off)
-  // Rows
-  for(int i=0; i < LED_NUMBER_OF_ROWS; i++){
-    Serial.println("Setting" + String(ledRowPins[i]) + "LOW");
-    mcpLights.digitalWrite(ledRowPins[i], LOW);
-    delay(50);
-  }
-  // columns
-  for(int i=0; i < LED_NUMBER_OF_COLUMNS; i++){
-    Serial.println("Setting" + String(ledColumnPins[i]) + "HIGH");
-    mcpLights.digitalWrite(ledColumnPins[i], HIGH);
-    delay(50);
-  }
+  // Read Start position
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("begin positie:");
+  lcd.setCursor(0,1);
+
+  displayRotors();
+  lcd.setCursor(0,1);
+  
+  rotorPosition1 = readChar(); 
+  displayRotors();
+
+  rotorPosition2 = readChar(); 
+  displayRotors();
+
+  rotorPosition3 = readChar(); 
+  displayRotors();
+
+  lcd.setCursor(0,0);
+  lcd.print("                ");
+  
 }
 
 void turnOnLedXms(int number, int x){
@@ -314,47 +408,83 @@ int letterToLight(char letter){
   }
 }
 
-
-void turnOnLedTillKeyIsReleased(int led, int rowPin){
-  int column = led % LED_NUMBER_OF_COLUMNS;
-  int row = led / LED_NUMBER_OF_COLUMNS;
+void displayRotors(){
+  String line = "|| " + String(rotorPosition3) + " | " + String(rotorPosition2) + " | " + String(rotorPosition1) + "  ||";
+  lcd.setCursor(0,1);
+  lcd.print(line);
   
-  mcpLights.digitalWrite(ledRowPins[row], HIGH);
-  mcpLights.digitalWrite(ledColumnPins[column], LOW);
-  
-  while(mcpKeys.digitalRead(rowPin)){
-    delay(20);
-  }
-
-  mcpLights.digitalWrite(ledRowPins[row], LOW);
-  mcpLights.digitalWrite(ledColumnPins[column], HIGH);
 }
 
-int translate( ){
+char translate(char c ){
+  // rotor 1
+  c = 'A' + ((c + rotorPosition1 - 'A') % 26);
+  Serial.println ("rotor 1 "  + String(rotorPosition1));
+  Serial.println("Adding " + String(((c + rotorPosition1 - 'A') % 26)));
+  Serial.println("Step1.1: " + String(c));
+  c = rotor1.charAt((unsigned int) c - 'A'); 
+  Serial.println("Step1.2: " + String(c));
   
+  // rotor 2
+//  c = 'A' + ((c + rotorPosition2 - 'A') % 26);
+//  Serial.println("Step2.1: " + String(c));
+//  c = rotor2.charAt((unsigned int)  c - 'A');
+//  Serial.println("Step2.2: " + String(c));
+//  
+//  // rotor 3
+//  c = 'A' + ((c + rotorPosition3 - 'A') % 26);
+//  Serial.println("Step3.1: " + String(c));
+//  c = rotor3.charAt((unsigned int)  c - 'A');
+//  Serial.println("Step3.2: " + String(c));
+  
+  
+ // And Back!
+  c = reflector.charAt((unsigned int) c - 'A');
+  Serial.println("Step4: " + String(c));
+//  
+//  
+//  // Rotor 3
+//  c = rotor3.charAt((unsigned int)  c - 'A');
+//  Serial.println("Step5.1: " + String(c));
+//  c = 'A' + ((c + rotorPosition3 - 'A') % 26);
+//  Serial.println("Step5.2: " + String(c));
+//  
+//
+//  // Rotor 2
+//  c = rotor2.charAt((unsigned int)  c - 'A');
+//  Serial.println("Step6.1: " + String(c));
+//  c = 'A' + ((c + rotorPosition2 - 'A') % 26);
+//  Serial.println("Step6.2: " + String(c));
+  
+
+  // Rotor 1
+  c = rotor1.charAt((unsigned int) c - 'A'); 
+  Serial.println("Step7.1: " + String(c));
+  c = 'A' + ((c + rotorPosition1 - 'A') % 26);
+  Serial.println("Step7.2: " + String(c));
+  
+ 
+  return c;
 }
 
 void loop() {
-  // Rows
-  int keyRead = -1;
-  for (int r = 0; r < KEY_NUMBER_OF_COLUMNS; r++){
-    // Scan 1 column
-    // Serial.println("Set ROW " + String(r) + " HIGH");
-    mcpKeys.digitalWrite(keyColumnPins[r], LOW);
-    for(int c = 0; c < KEY_NUMBER_OF_ROWS; c++){
-      //delay(100);
-      bool cRead = mcpKeys.digitalRead(keyRowPins[c] );
-      // Serial.println("Read COLUMNS " + String(c) + ": " + String(cRead));
-      if (!cRead){
-        keyRead = (r * KEY_NUMBER_OF_ROWS) + c ;
-        char charRead = keyToLetter(keyRead);
-        int ledToLight = letterToLight(charRead);
-        Serial.println("Read:  number " + String(charRead));
-        //turnOnLedTillKeyIsReleased(keyRead, keyRowPins[c]);
-        turnOnLedXms(ledToLight, 1000);
-      }
-    }
-    // Serial.println("Set ROW " + String(r) + " LOW");
-    mcpKeys.digitalWrite(keyColumnPins[r], HIGH);
+  char input = readChar();
+  Serial.println("Read " + String(input));
+
+  rotorPosition1 = rotorPosition1 + 1;
+  if (rotorPosition1 > 'Z'){
+    rotorPosition2 = rotorPosition2 + 1;
+    rotorPosition1 = 'A';
   }
+  if (rotorPosition2 > 'Z'){
+    rotorPosition3 = rotorPosition3 + 1;
+    rotorPosition2 = 'A';
+  }
+  if (rotorPosition3 > 'Z'){
+    rotorPosition3 = 'A';
+  }
+  displayRotors();
+  
+  char translated = translate(input);
+  Serial.println("translated to " + String(translated));
+  turnOnLedXms(letterToLight(translated), 10);
 }
