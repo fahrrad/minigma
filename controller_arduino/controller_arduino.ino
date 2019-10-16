@@ -63,6 +63,11 @@ char rotorPosition3 = '?';
 String rotor1 = "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
 String rotor2 = "AJDKSIRUXBLHWTMCQGZNPYFVOE";
 String rotor3 = "BDFHJLCPRTXVZNYEIWGAKMUSQO";
+
+String rotor1-r = "UWYGADFPVZBECKMTHXSLRINQOJ";
+String rotor2-r = "AJPCZWRLFBDKOTYUQGENHXMIVS";
+String rotor3-r = "TAGBPCSDQEUFVNZHYIXJWLRKOM";
+
 String reflector = "EJMZALYXVBWFCRQUONTSPIKHGD";
 
 void i2c_scan()
@@ -415,55 +420,39 @@ void displayRotors(){
   
 }
 
-char translate(char c ){
-  // rotor 1
-  c = 'A' + ((c + rotorPosition1 - 'A') % 26);
-  Serial.println ("rotor 1 "  + String(rotorPosition1));
-  Serial.println("Adding " + String(((c + rotorPosition1 - 'A') % 26)));
-  Serial.println("Step1.1: " + String(c));
-  c = rotor1.charAt((unsigned int) c - 'A'); 
-  Serial.println("Step1.2: " + String(c));
-  
-  // rotor 2
-//  c = 'A' + ((c + rotorPosition2 - 'A') % 26);
-//  Serial.println("Step2.1: " + String(c));
-//  c = rotor2.charAt((unsigned int)  c - 'A');
-//  Serial.println("Step2.2: " + String(c));
-//  
-//  // rotor 3
-//  c = 'A' + ((c + rotorPosition3 - 'A') % 26);
-//  Serial.println("Step3.1: " + String(c));
-//  c = rotor3.charAt((unsigned int)  c - 'A');
-//  Serial.println("Step3.2: " + String(c));
-  
-  
- // And Back!
-  c = reflector.charAt((unsigned int) c - 'A');
-  Serial.println("Step4: " + String(c));
-//  
-//  
-//  // Rotor 3
-//  c = rotor3.charAt((unsigned int)  c - 'A');
-//  Serial.println("Step5.1: " + String(c));
-//  c = 'A' + ((c + rotorPosition3 - 'A') % 26);
-//  Serial.println("Step5.2: " + String(c));
-//  
-//
-//  // Rotor 2
-//  c = rotor2.charAt((unsigned int)  c - 'A');
-//  Serial.println("Step6.1: " + String(c));
-//  c = 'A' + ((c + rotorPosition2 - 'A') % 26);
-//  Serial.println("Step6.2: " + String(c));
-  
+char rotate(char c, int rotation){
+  return 'A' + (c - 'A' + rotation) % 26;
+}
 
-  // Rotor 1
-  c = rotor1.charAt((unsigned int) c - 'A'); 
-  Serial.println("Step7.1: " + String(c));
-  c = 'A' + ((c + rotorPosition1 - 'A') % 26);
-  Serial.println("Step7.2: " + String(c));
+char translate(char c, String rotor){
+   return rotor.charAt(c - 'A');
+}
+
+char enigmate(char c ){
+  // rotor 1
+  c = rotate(c, rotorPosition1);
+  c = translate(c, rotor1);
+
+  // rotor 2
+  c = rotate(c, rotorPosition2);
+  c = translate(c, rotor2);
+
+  // rotor 3
+  c = rotate(c, rotorPosition3);
+  c = translate(c, rotor3);
+
+  // reflector
+  c = translate(c, reflector);
+
+  // rotor 3
+  c = translate(c, -rotor3);
+  c = rotate(c, rotor3-r);
   
- 
-  return c;
+  c = translate(c, -rotor2);
+  c = rotate(c, rotor2-r);
+
+  c = translate(c, -rotor1);
+  return rotate(c, rotor1-r);
 }
 
 void loop() {
@@ -484,7 +473,7 @@ void loop() {
   }
   displayRotors();
   
-  char translated = translate(input);
-  Serial.println("translated to " + String(translated));
-  turnOnLedXms(letterToLight(translated), 10);
+  char enigmated = enigmate(input);
+  Serial.println("translated to " + String(enigmated));
+  turnOnLedXms(letterToLight(enigmated), 10);
 }
