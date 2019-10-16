@@ -60,15 +60,17 @@ char rotorPosition1 = '?';
 char rotorPosition2 = '?';
 char rotorPosition3 = '?';
 
-String rotor1 = "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
-String rotor2 = "AJDKSIRUXBLHWTMCQGZNPYFVOE";
-String rotor3 = "BDFHJLCPRTXVZNYEIWGAKMUSQO";
 
-String rotor1-r = "UWYGADFPVZBECKMTHXSLRINQOJ";
-String rotor2-r = "AJPCZWRLFBDKOTYUQGENHXMIVS";
-String rotor3-r = "TAGBPCSDQEUFVNZHYIXJWLRKOM";
+//                   ABCDEFGHIJKLMNOPQRSTUVWXYZ
+String rotor1 =     "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
+String rotor2 =     "AJDKSIRUXBLHWTMCQGZNPYFVOE";
+String rotor3 =     "BDFHJLCPRTXVZNYEIWGAKMUSQO";
 
-String reflector = "EJMZALYXVBWFCRQUONTSPIKHGD";
+String rotor1_r =   "UWYGADFPVZBECKMTHXSLRINQOJ";
+String rotor2_r =   "AJPCZWRLFBDKOTYUQGENHXMIVS";
+String rotor3_r =   "TAGBPCSDQEUFVNZHYIXJWLRKOM";
+
+String reflector =  "EJMZALYXVBWFCRQUONTSPIKHGD";
 
 void i2c_scan()
 {
@@ -420,8 +422,14 @@ void displayRotors(){
   
 }
 
-char rotate(char c, int rotation){
-  return 'A' + (c - 'A' + rotation) % 26;
+char rotate(char c, char rotation, bool back){
+  Serial.println("rotate " + String(c) + " with " + String(rotation - 'A'));
+  int rotate_by = rotation - 'A';
+  if(!back){
+    return 'A' + ((c - 'A' + rotate_by) % 26);
+  }else {
+    return 'A' + ((c - 'A' - rotate_by) % 26);
+  }
 }
 
 char translate(char c, String rotor){
@@ -430,29 +438,35 @@ char translate(char c, String rotor){
 
 char enigmate(char c ){
   // rotor 1
-  c = rotate(c, rotorPosition1);
+  c = rotate(c, rotorPosition1, false);
+  Serial.println("1:" + String(c));
   c = translate(c, rotor1);
+  Serial.println("2:" + String(c));
 
-  // rotor 2
-  c = rotate(c, rotorPosition2);
-  c = translate(c, rotor2);
+//  // rotor 2
+//  c = rotate(c, rotorPosition2);
+//  c = translate(c, rotor2);
+//
+//  // rotor 3
+//  c = rotate(c, rotorPosition3);
+//  c = translate(c, rotor3);
+//
+//  // reflector
+   c = translate(c, reflector);
+   Serial.println("3:" + String(c));
+//
+//  // rotor 3
+//  c = translate(c, rotor3_r);
+//  c = rotate(c, 0 - rotorPosition3);
+//  
+//  c = translate(c, rotor2_r);
+//  c = rotate(c, 0 - rotorPosition2);
 
-  // rotor 3
-  c = rotate(c, rotorPosition3);
-  c = translate(c, rotor3);
+  c = translate(c, rotor1_r);
+  Serial.println("4:" + String(c));
+  c = rotate(c, rotorPosition1, true);
 
-  // reflector
-  c = translate(c, reflector);
-
-  // rotor 3
-  c = translate(c, -rotor3);
-  c = rotate(c, rotor3-r);
-  
-  c = translate(c, -rotor2);
-  c = rotate(c, rotor2-r);
-
-  c = translate(c, -rotor1);
-  return rotate(c, rotor1-r);
+  return c;
 }
 
 void loop() {
