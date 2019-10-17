@@ -423,12 +423,15 @@ void displayRotors(){
 }
 
 char rotate(char c, char rotation, bool back){
-  Serial.println("rotate " + String(c) + " with " + String(rotation - 'A'));
-  int rotate_by = rotation - 'A';
+  int ord = c - 'A';
+  int rotateBy = rotation - 'A';
   if(!back){
-    return 'A' + ((c - 'A' + rotate_by) % 26);
-  }else {
-    return 'A' + ((c - 'A' - rotate_by) % 26);
+    int newOrd = (ord + rotateBy) % 26;
+    return char(newOrd + 'A'); 
+  }else{
+    int newOrd = (ord - rotateBy) % 26;
+    if(newOrd < 0) newOrd = 26 + newOrd;
+    return char(newOrd + 'A');
   }
 }
 
@@ -439,31 +442,27 @@ char translate(char c, String rotor){
 char enigmate(char c ){
   // rotor 1
   c = rotate(c, rotorPosition1, false);
-  Serial.println("1:" + String(c));
   c = translate(c, rotor1);
-  Serial.println("2:" + String(c));
 
-//  // rotor 2
-//  c = rotate(c, rotorPosition2);
-//  c = translate(c, rotor2);
-//
-//  // rotor 3
-//  c = rotate(c, rotorPosition3);
-//  c = translate(c, rotor3);
-//
+  // rotor 2
+  c = rotate(c, rotorPosition2, false);
+  c = translate(c, rotor2);
+
+  // rotor 3
+  c = rotate(c, rotorPosition3, false);
+  c = translate(c, rotor3);
+
 //  // reflector
    c = translate(c, reflector);
-   Serial.println("3:" + String(c));
-//
-//  // rotor 3
-//  c = translate(c, rotor3_r);
-//  c = rotate(c, 0 - rotorPosition3);
-//  
-//  c = translate(c, rotor2_r);
-//  c = rotate(c, 0 - rotorPosition2);
+
+  // rotor 3
+  c = translate(c, rotor3_r);
+  c = rotate(c, rotorPosition3, true);
+  
+  c = translate(c, rotor2_r);
+  c = rotate(c, rotorPosition2, true);
 
   c = translate(c, rotor1_r);
-  Serial.println("4:" + String(c));
   c = rotate(c, rotorPosition1, true);
 
   return c;
