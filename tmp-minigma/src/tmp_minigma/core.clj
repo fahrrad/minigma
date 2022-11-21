@@ -115,8 +115,9 @@
 
 
 (deftest symetric-test
-  (let [_ (set-start-rotor 4 6 3)
-        encoded (enigmate-string "testabc")
+  (let [s "testabc"
+        _ (set-start-rotor 4 6 3)
+        encoded (enigmate-string s)
         _ (set-start-rotor 4 6 3)
         decoded (enigmate-string encoded)]
-    (is (= "testabc" decoded))))
+    (is (= s decoded))))
